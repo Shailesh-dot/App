@@ -1,0 +1,22 @@
+// script.js - Handles the form submission and displays search results
+document.getElementById('searchForm').addEventListener('submit', function (e) {
+    e.preventDefault(); // Prevent form from submitting the traditional way
+
+    // Get form data
+    const formData = new FormData(this);
+
+    // Send form data to PHP script via fetch API
+    fetch('search.php', {
+        method: 'POST',
+        body: formData,
+    })
+        .then(response => response.text())
+        .then(data => {
+            // Display results in the #results div
+            document.getElementById('results').innerHTML = data;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            document.getElementById('results').innerHTML = '<p>There was an error processing your search.</p>';
+        });
+});

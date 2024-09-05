@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Module</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Search Module</h1>
+        <form id="searchForm">
+            <div class="form-group">
+                <label for="keyword" class="box1">Keyword  :</label>
+                <input type="text" id="keyword" name="keyword" placeholder="Enter technology or tool" required>
+            </div>
+            <div class="form-group">
+                <label for="category" class="box2">Category:</label>
+                <select id="category" name="category">
+                    <option value="">All Categories</option>
+                    <option value="frontend">Frontend</option>
+                    <option value="backend">Backend</option>
+                    <option value="database">Database</option>
+                    <option value="mobile">Mobile</option>
+                    <option value="tools">Tools</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="sortBy" class="box3">Sort By:</label>
+                <select id="sortBy" name="sortBy" class="box4">
+                    <option value="relevance">Relevance</option>
+                    <option value="alphabetical">Alphabetical</option>
+                </select>
+            </div>
+            <button type="submit">Search</button>
+        </form>
+        <div id="results"></div>
+    </div>
+    <div class="container" id="results" onclick="call(event)">
+        <h1>Search Results</h1>
+        <ul>
+            <li>
+                <a href="https://reactjs.org/" target="_blank">
+                    React - Official Website
+                </a>
+                <br>
+                <span class="description">React is a popular library for building user interfaces. Visit the official React website to get started.</span>
+            </li>
+            <li>
+                <a href="https://angular.io/" target="_blank">
+                    Angular - Official Website
+                </a>
+                <br>
+                <span class="description">Angular is a platform for building mobile and desktop web applications. Check out the official Angular site for documentation and tutorials.</span>
+            </li>
+            <li>
+                <a href="https://vuejs.org/" target="_blank">
+                    Vue.js - Official Website
+                </a>
+                <br>
+                <span class="description">Vue.js is a progressive framework for building user interfaces. Visit the Vue.js site for resources and guides.</span>
+                <br>
+            </li>
+            <li>
+                <a href="https://nodejs.org/" target="_blank">
+                    Node.js - Official Website
+                </a>
+                <br>
+                <span class="description">Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. Visit the Node.js site to download and learn more.</span>
+            </li>
+            <li>
+                <a href="https://www.djangoproject.com/" target="_blank">
+                    Django - Official Website
+                </a>
+                <br>
+                <span class="description">Django is a high-level Python web framework that encourages rapid development. Check out the Django official site for documentation and resources.</span>
+            </li>
+            <li>
+                <a href="https://laravel.com/" target="_blank">
+                    Laravel - Official Website
+                </a>
+                <br>
+                <span class="description">Laravel is a PHP framework for web artisans. Visit the Laravel site for tutorials, documentation, and more.</span>
+            </li>
+            <li>
+                <a href="https://www.mongodb.com/" target="_blank">
+                    MongoDB - Official Website
+                </a>
+                <br>
+                <span class="description">MongoDB is a NoSQL database for modern applications. Visit MongoDB's website for documentation and downloads.</span>
+            </li>
+            <li>
+                <a href="https://www.mysql.com/" target="_blank">
+                    MySQL - Official Website
+                </a>
+                <br>
+                <span class="description">MySQL is an open-source relational database management system. Check out the MySQL website for resources and support.</span>
+            </li>
+            <li>
+                <a href="https://www.postgresql.org/" target="_blank">
+                    PostgreSQL - Official Website
+                </a>
+                <br>
+                <span class="description">PostgreSQL is a powerful, open-source object-relational database system. Visit PostgreSQL's site for documentation and community support.</span>
+            </li>
+            <li>
+                <a href="https://flutter.dev/" target="_blank">
+                    Flutter - Official Website
+                </a>
+                <br>
+                <span class="description">Flutter is an open-source UI software development toolkit by Google. Visit Flutter's website to get started and access resources.</span>
+            </li>
+            <li>
+                <a href="https://reactnative.dev/" target="_blank">
+                    React Native - Official Website
+                </a>
+                <br>
+                <span class="description">React Native is a framework for building native apps using React. Check out the React Native site for documentation and guides.</span>
+            </li>
+            <li>
+                <a href="https://dotnet.microsoft.com/apps/xamarin" target="_blank">
+                    Xamarin - Official Website
+                </a>
+                <br>
+                <span class="description">Xamarin is a Microsoft framework for building mobile applications. Visit the Xamarin website for tutorials and documentation.</span>
+            </li>
+            <li>
+                <a href="https://code.visualstudio.com/" target="_blank">
+                    Visual Studio Code - Official Website
+                </a>
+                <br>
+                <span class="description">Visual Studio Code is a free code editor developed by Microsoft. Visit the VS Code site for downloads and extensions.</span>
+            </li>
+            <li>
+                <a href="https://github.com/" target="_blank">
+                    GitHub - Official Website
+                </a>
+                <br>
+                <span class="description">GitHub is a platform for version control and collaboration. Visit GitHub to host and review code, manage projects, and build software.</span>
+            </li>
+            <li>
+                <a href="https://www.atlassian.com/software/jira" target="_blank">
+                    JIRA - Official Website
+                </a>
+                <br>
+                <span class="description">JIRA is a tool for project management and issue tracking. Visit the JIRA website to learn more and get started.</span>
+            </li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
